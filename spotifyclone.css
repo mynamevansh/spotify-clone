@@ -1,0 +1,865 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-bar{
+    height: 64px;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.logo-bar{
+    width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left:10px ;
+}
+.spotify-logo{
+    height: 72px;
+    width: 72px;
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    height: 64px;
+    width: 100%;
+    background-image: url(Spotify.jpg       );
+    background-size: cover;
+}
+.together{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-box{
+    height: 48px;
+    width: 48px;
+}
+.black-circle{
+    height: 46px;
+    width: 46px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color:#ffffff;
+    background-color: #1F1F1F;
+}
+.search-bar{
+    height: 48px;
+    width: 478px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background-color:#1F1F1F ;
+}
+.search{
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+.browse{
+    height: 25px;
+    width: 25px;
+    font-size: 24px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-bar p{
+    color: #b3b3b3;
+    width: 77%;
+    border-right: 2px solid #b3b3b3;
+    font-size: 18px;
+}
+.premium{
+    height: 48px;
+    width: 220px;
+    color: #b3b3b3;
+    border-right: 2px solid #b3b3b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    margin-left: 60px;
+}
+.install{
+    height: 26px;
+    width: 118px;
+    color: #b3b3b3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.button{
+    height: 48px;
+    width: 108px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button button{
+    height: 48px;
+    width: 100px;
+    background-color: #ffffff;
+    border-radius: 30px;
+}
+.main-section{
+    height: 2100px;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.library-section{
+    height: 900px;
+    width: 420px;
+    background-color: #121212;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 7px;
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 69px;
+}
+.library-bar{
+    height: 60px;
+    width: 420px;
+}
+.library{
+    height: 60px;
+    width: 388px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    color: #b3b3b3;
+}
+.list{
+    margin: 5px;
+    font-size: 24px;
+}
+.library p{
+    width:85%;
+    margin-left: 5px;
+    font-size: 16px;
+}
+.first-box{
+    height: 533px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.playlist{
+    height: 134px;
+    width: 404px;
+    background-color: #1F1F1F;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.playlist-content{
+    margin: 15px;
+}
+.playlist-content button{
+    height: 32px;
+    width:125px;
+}
+.podcast{
+    height: 134px;
+    width: 404px;
+    background-color: #1F1F1F;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.podcast-content{
+    margin: 15px;
+}
+.podcast-content button{
+    height: 32px;
+    width:125px;
+}
+.remaining-section{
+    height: 208px;
+    width: 372px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.remaining-content{
+    height: 80px;
+    width: 372px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.remaining-content button{
+    height: 32px;
+    width: 95px;
+    border: 2px solid white;
+    border-radius: 15px;
+    color: #ffffff;
+    background-color: #1F1F1F;
+    padding: 5px;
+}
+.songs-section{
+    height: 2009px;
+    width: 76%; 
+    background-color: #121212;
+    border:2px solid black;
+    border-radius: 10px;
+    margin-top: 7px;
+    margin-left: 9px;
+    position: absolute;
+    top: 69px; /* Below navbar */
+    left: 432px; /* Push right to fit next to the fixed library */
+    min-height: 100vh; /* Allow it to expand */
+    overflow-y: auto; /* Enable scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.popular{
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+.popular-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    text-decoration: none;
+}
+.popular-content h2:hover,.popular-content a:hover{
+    text-decoration: underline;
+}
+.popular-content a{
+    text-decoration: none;
+    margin-left: 1170px;
+}
+.artist{
+    height: 240px;
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 13px;
+}
+.photo{
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+.photo:hover{
+    border: 4px solid white;
+    transform: scale(1.1); /* Zoom in effect */
+}
+.pritam{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.pritam-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 50%;
+    background-image: url(pritam2.webp);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+.pritam-content{
+    margin-top: 7px ;
+}
+.arjit{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.arjit-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 50%;
+    background-image: url(arjit.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+.arjit-content{
+    margin-top: 7px ;
+}
+.rahman{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.rahman-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 50%;
+    background-image: url(rahman.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+.rahman-content{
+    margin-top: 7px ;
+}
+.sachin{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.sachin-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 50%;
+    background-image: url(sachin-jigar2.webp);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+.sachin-content{
+    margin-top: 7px ;
+}
+.vishal{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.vishal-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 50%;
+    background-image: url(vishal\ shekhar2.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+.vishal-content{
+    margin-top: 7px ;
+}
+.atif{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.atif-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 50%;
+    background-image: url(atif2.webp);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+.atif-content{
+    margin-top: 7px ;
+}
+.albums{
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+.albums-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    text-decoration: none;
+}
+.albums-content h2:hover,.albums-content a:hover{
+    text-decoration: underline;
+}
+.albums-content a{
+    text-decoration: none;
+    margin-left: 1008px;
+}
+.singer{
+    height: 256px;
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 13px;
+}
+.honey{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.honey-photo{
+    height:190px;
+    width: 190px;
+    border-radius:10px;
+    background-image: url(honey.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+.honey-content{
+    margin-top: 7px ;
+}
+.badshah{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.badshah-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(badshah.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+.badshah-content{
+    margin-top: 7px ;
+}
+.ranbir{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.ranbir-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(animal3.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.ranbir-content{
+    margin-top: 7px ;
+}
+.diljit{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.diljit-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(diljit.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.diljit-content{
+    margin-top: 7px ;
+}
+.krsna{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.krsna-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(krsna.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.krsna-content{
+    margin-top: 7px ;
+}
+.karan{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.karan-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(karan.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.karan-content{
+    margin-top: 7px ;
+}
+.hip-hop{
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+.hip-hop-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    text-decoration: none;
+}
+.hip-hop-content h2:hover,.hip-hop-content a:hover{
+    text-decoration: underline;
+}
+.hip-hop-content a{
+    text-decoration: none;
+    margin-left: 1008px;
+}
+.rapper{
+    height: 256px;
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 13px;
+}
+.seedhe-maut{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.seedhe-maut-photo{
+    height:190px;
+    width: 190px;
+    border-radius:10px;
+    background-image: url(seedhe-maut.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.seedhe-maut-content{
+    margin-top: 7px ;
+}
+.raftaar{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.raftaar-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(raftaar2.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.raftaar-content{
+    margin-top: 7px ;
+}
+.mcstan{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.mcstan-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(MCSTAN.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.mcstan-content{
+    margin-top: 7px ;
+}
+.emiway{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.emiway-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(emiway.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.emiway-content{
+    margin-top: 7px ;
+}
+.krsna{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.krsna-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(krsna.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.krsna-content{
+    margin-top: 7px ;
+}
+.divine{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.divine-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(DIVINE.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.divine-content{
+    margin-top: 7px ;
+}
+.music{
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+.music-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    text-decoration: none;
+}
+.music-content h2:hover,.music-content a:hover{
+    text-decoration: underline;
+}
+.music-content a{
+    text-decoration: none;
+    margin-left: 1008px;
+}
+.white{
+    height: 256px;
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 13px;
+}
+.justin-bieber{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.justin-bieber-photo{
+    height:190px;
+    width: 190px;
+    border-radius:10px;
+    background-image: url(justin-bieber.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.justin-bieber-content{
+    margin-top: 7px ;
+}
+.Ed-Sheeran{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Ed-Sheeran-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(Ed\ Sheeran.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.Ed-Sheeran-content{
+    margin-top: 7px ;
+}
+.Billie-Ellish{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Billie-Ellish-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(Bilie\ elish\ 💚.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.Billie-Ellish-content{
+    margin-top: 7px ;
+}
+.Taylor-Swift{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Taylor-Swift-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(taylor.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.Taylor-Swift-content{
+    margin-top: 7px ;
+}
+.Eminem{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Eminem-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(eminem.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.Eminem-content{
+    margin-top: 7px ;
+}
+.Drake{
+    height:237px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Drake-photo{
+    height:190px;
+    width: 190px;
+    border-radius: 10px;
+    background-image: url(drake.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.Drake-content{
+    margin-top: 7px ;
+}
+.bottom-content{
+    height: 300px;
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bottom-content ul{
+    color:  #b3b3b3;
+    list-style: none;
+}
+.handles{
+    width: 200px;
+    color:#ffffff;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.last-line{
+    height: 300px;
+    width: 1200px;
+    border-top:2px solid #1F1F1F ;
+    color: #b3b3b3;
+    margin-left: 30px;
+}
+.last-line p{
+    margin-top: 50px;
+}
